@@ -6,6 +6,10 @@ body {
   text-align: center;
  }
 
+ .header {
+  color: #000;
+ }
+
 li {
   display: inline;
   padding: 20px;
@@ -14,4 +18,8 @@ li {
 
 li a {
   text-decoration: none;
+}
+
+footer {
+  border: 3px solid #000;
 }
