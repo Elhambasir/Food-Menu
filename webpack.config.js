@@ -10,11 +10,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
+      template: './src/index.html',
     }),
   ],
   mode: 'development',
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -26,11 +27,8 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: '../src/img/',
       },
     ],
-  },
-  optimization: {
-    runtimeChunk: 'single',
   },
 };
