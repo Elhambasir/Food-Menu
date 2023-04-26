@@ -1,4 +1,25 @@
-.hello {
-  color: red;
-  background: url('./img/basirElham.jpg');
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.header {
+  color: #000;
+}
+
+li {
+  display: inline;
+  padding: 20px;
+  color: #000;
+}
+
+li a {
+  text-decoration: none;
+}
+
+footer {
+  border: 3px solid #000;
 }
