@@ -1,3 +1,7 @@
+.food-container {
+  width: 100%;
+}
+
 body {
   background-color: #f1f1f1;
   margin: 0;
@@ -22,4 +26,63 @@ li a {
 
 footer {
   border: 3px solid #000;
+}
+
+.food-list {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+}
+
+.food-card {
+  border: 1px solid lightblue;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 2%;
+}
+
+.food-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.like-section {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+
+div.button {
+  display: flex;
+}
+
+div.button input {
+  flex: 1;
+  border: 1px solid lightblue;
+  padding: 10px;
+}
+
+div.button input:hover {
+  cursor: pointer;
+  background-color: cadetblue;
+  color: white;
+}
+
+.like-symbol {
+  font-size: 20px;
+  color: orange;
+}
+
+.like-symbol:hover {
+  cursor: pointer;
 }
