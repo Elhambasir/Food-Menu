@@ -1,3 +1,6 @@
+const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const likeApiKey = 'DQ1WY7tbkUIhRnRaIdyZ';
+
 const foodCards = document.querySelector('.food-list');
 const meals = [];
 function renderHtmlPage(meals) {
@@ -8,7 +11,7 @@ function renderHtmlPage(meals) {
       <p class="food-name">${meal[0].strMeal}</p>
       </div>
       <div class="like-section">
-      <p class="like-symbol" data-id=${meal[0].idMeal}>&#10084;</p>
+      <p class="like-symbol" data-id=${meal[0].idMeal}><i class="fa fa-heart"></i></p>
       <div class="like-count" data-id=${meal[0].idMeal}>
       </div>
       <div class="likes">likes</div>
@@ -40,6 +43,47 @@ const displayFoodDetails = () => {
   };
   getResponse().then((meals) => {
     renderHtmlPage(meals);
+  }).then(async () => {
+    const likeCounterAPI = await fetch(`${likeApi}${likeApiKey}/likes/`)
+      .then((response) => response.json())
+      .then((data) => data);
+
+    const likesCounter = foodCards.querySelectorAll('.like-count');
+    likesCounter.forEach((likeCounter) => {
+      const likesId = likeCounter.getAttribute('data-id');
+      const liked = document.querySelectorAll('.like-symbol');
+      const element = likeCounter;
+      likeCounterAPI.forEach((likeAPI) => {
+        if (likesId === likeAPI.item_id) {
+          liked.forEach((likedItem) => {
+            if (likesId === likedItem.getAttribute('data-id')) {
+              likedItem.classList.add('liked');
+            }
+          });
+          element.innerHTML = likeAPI.likes;
+          // console.log(likeAPI.likes, likeAPI.item_id, likesId);
+        }
+      });
+    });
+    // To add or Create like when Heart is pressed
+    const likesButton = foodCards.querySelectorAll('.like-symbol');
+    likesButton.forEach((likeButton) => {
+      likeButton.addEventListener('click', (e) => {
+        // eslint-disable-next-line max-len
+        const targetCounter = e.target.nextElementSibling.children[0].innerText;
+        // eslint-disable-next-line max-len
+        e.target.nextElementSibling.children[0].innerText = (+targetCounter) + 1;
+        fetch(`${likeApi}${likeApiKey}/likes/`, {
+          method: 'POST',
+          body: JSON.stringify({
+            item_id: likeButton.getAttribute('data-id'),
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        });
+      });
+    });
   });
 };
 
