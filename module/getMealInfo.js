@@ -1,3 +1,5 @@
+import countItems from './itemCount.js';
+
 const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 const likeApiKey = 'DQ1WY7tbkUIhRnRaIdyZ';
 
@@ -44,6 +46,8 @@ const displayFoodDetails = () => {
   getResponse().then((meals) => {
     renderHtmlPage(meals);
   }).then(async () => {
+    const numOfItems = document.querySelector('.number-of-items');
+    countItems(meals.length, numOfItems);
     const likeCounterAPI = await fetch(`${likeApi}${likeApiKey}/likes/`)
       .then((response) => response.json())
       .then((data) => data);
