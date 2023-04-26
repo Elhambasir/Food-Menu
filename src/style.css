@@ -1,12 +1,11 @@
 .food-container {
-  width: 100%;
+  padding: 10px;
+  height: auto;
 }
 
 body {
   background-color: #f1f1f1;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
   text-align: center;
 }
 
@@ -24,16 +23,13 @@ li a {
   text-decoration: none;
 }
 
-footer {
-  border: 3px solid #000;
-}
-
 .food-list {
   width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3%;
+  gap: 25px;
+  height: auto;
 }
 
 .food-card {
@@ -42,6 +38,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  float: left;
 }
 
 .food-card img {
@@ -85,4 +82,11 @@ div.button input:hover {
 
 .like-symbol:hover {
   cursor: pointer;
+}
+
+footer {
+  width: 99%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  text-align: center;
 }
