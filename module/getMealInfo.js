@@ -1,4 +1,5 @@
 import countItems from './itemCount.js';
+
 const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 const likeApiKey = 'DQ1WY7tbkUIhRnRaIdyZ';
 
