@@ -76,7 +76,10 @@ div.button input:hover {
 }
 
 .like-symbol {
-  font-size: 20px;
+  color: lightgray;
+}
+
+.liked {
   color: orange;
 }
 
