@@ -1,3 +1,5 @@
+import countItems from './itemCount.js';
+
 const foodCards = document.querySelector('.food-list');
 const meals = [];
 function renderHtmlPage(meals) {
@@ -40,6 +42,9 @@ const displayFoodDetails = () => {
   };
   getResponse().then((meals) => {
     renderHtmlPage(meals);
+  }).then(async () => {
+    const numOfItems = document.querySelector('.number-of-items');
+    countItems(meals.length, numOfItems);
   });
 };
 
