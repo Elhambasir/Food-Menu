@@ -1,3 +1,8 @@
+import countItems from './itemCount.js';
+
+const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const likeApiKey = 'DQ1WY7tbkUIhRnRaIdyZ';
+
 const foodCards = document.querySelector('.food-list');
 const meals = [];
 function renderHtmlPage(meals) {
@@ -8,7 +13,7 @@ function renderHtmlPage(meals) {
       <p class="food-name">${meal[0].strMeal}</p>
       </div>
       <div class="like-section">
-      <p class="like-symbol" data-id=${meal[0].idMeal}>&#10084;</p>
+      <p class="like-symbol" data-id=${meal[0].idMeal}><i class="fa fa-heart"></i></p>
       <div class="like-count" data-id=${meal[0].idMeal}>
       </div>
       <div class="likes">likes</div>
@@ -40,6 +45,30 @@ const displayFoodDetails = () => {
   };
   getResponse().then((meals) => {
     renderHtmlPage(meals);
+  }).then(async () => {
+    const numOfItems = document.querySelector('.number-of-items');
+    countItems(meals.length, numOfItems);
+    const likeCounterAPI = await fetch(`${likeApi}${likeApiKey}/likes/`)
+      .then((response) => response.json())
+      .then((data) => data);
+
+    const likesCounter = foodCards.querySelectorAll('.like-count');
+    likesCounter.forEach((likeCounter) => {
+      const likesId = likeCounter.getAttribute('data-id');
+      const liked = document.querySelectorAll('.like-symbol');
+      const element = likeCounter;
+      likeCounterAPI.forEach((likeAPI) => {
+        if (likesId === likeAPI.item_id) {
+          liked.forEach((likedItem) => {
+            if (likesId === likedItem.getAttribute('data-id')) {
+              likedItem.classList.add('liked');
+            }
+          });
+          element.innerHTML = likeAPI.likes;
+        }
+      });
+    });
+    // To add or Create like when Heart is pressed
   });
 };
 
