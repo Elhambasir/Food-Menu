@@ -5,43 +5,36 @@ const likeApiKey = 'DQ1WY7tbkUIhRnRaIdyZ';
 
 const foodCards = document.querySelector('.food-list');
 const meals = [];
-function renderHtmlPage(meals) {
-  foodCards.innerHTML = meals.map((meal) => `
-  <div class="food-card">
-    <img src="${meal[0].strMealThumb}" class="img-food">
+function renderHtmlPage(meal) {
+  meal.forEach((item) => {
+    foodCards.innerHTML += `
+    <div class="food-card">
+    <img src="${item.meals[0].strMealThumb}" class="img-food">
     <div class="food-info">
-      <p class="food-name">${meal[0].strMeal}</p>
+      <p class="food-name">${item.meals[0].strMeal}</p>
       </div>
       <div class="like-section">
-      <p class="like-symbol" data-id=${meal[0].idMeal}><i class="fa fa-heart"></i></p>
-      <div class="like-count" data-id=${meal[0].idMeal}>
+      <p class="like-symbol" data-id="${item.meals[0].idMeal}"><i class="fa fa-heart"></i></p>
+      <div class="like-count" data-id="${item.meals[0].idMeal}">
       </div>
       <div class="likes">likes</div>
     </div>
     <div class="button">
-      <input type="button" class="btnComments" value="Comments">
-      <input type="button" class="btnReserve" value="Reserve">
+    <input type="button" class="btnComments" value="Comments">
+    <input type="button" class="btnReserve" value="Reserve">
     </div>
-  </div>
-`).join('');
+    </div>
+    `;
+  });
 }
 
 const displayFoodDetails = () => {
   const getResponse = async () => {
-    for (let i = 0; i < 9; i += 1) {
-      // eslint-disable-next-line no-await-in-loop
-      const response = await fetch(
-        'https://www.themealdb.com/api/json/v1/1/random.php',
-        {
-          method: 'GET',
-        },
-      );
-      // eslint-disable-next-line no-await-in-loop
-      const foodRandomdata = await response.json();
-      meals.push(foodRandomdata.meals);
-      // eslint-disable-next-line space-infix-ops
+    for (let i = 52770; i < 52777; i += 1) {
+      const objectItem = fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${i}`).then((res) => res.json());
+      meals.push(objectItem);
     }
-    return meals;
+    return Promise.all(meals);
   };
   getResponse().then((meals) => {
     renderHtmlPage(meals);
