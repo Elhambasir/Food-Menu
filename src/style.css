@@ -107,6 +107,7 @@ footer {
   left: 0;
   height: 103vh;
   width: 100%;
+  background-color: #000;
   backdrop-filter: blur(4px);
 }
 
