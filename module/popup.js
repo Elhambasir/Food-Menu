@@ -18,8 +18,7 @@ const popup = () => {
       
        <form class="form-control" id="Form">
         <input type="text" class="input" id="input" placeholder="your name">
-        <textarea class="text" name="comment" id="" cols="30" rows="10" placeholder="your comment">
-        </textarea>
+        <textarea class="text" name="comment" id="Text" cols="30" rows="10" placeholder="your comment"></textarea>
         <button type="submit">Add comment</button>
        </form>
  </div>

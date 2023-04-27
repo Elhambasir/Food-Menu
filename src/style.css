@@ -63,6 +63,10 @@ div.button {
   display: flex;
 }
 
+input {
+  padding: 7px;
+}
+
 div.button input {
   flex: 1;
   border: 1px solid lightblue;
