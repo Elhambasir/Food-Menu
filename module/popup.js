@@ -11,9 +11,19 @@ const popup = () => {
           <div  class="names">Length: 100,000</div>
           <div  class="names">Power: 100,000,000</div>
         </div>
+        <div class="list">
+        <h2>Add Comments</h2>
+        <div></div>
+       </div>
+      
+       <form class="form-control" id="Form">
+        <input type="text" class="input" id="input" placeholder="your name">
+        <textarea class="text" name="comment" id="" cols="30" rows="10" placeholder="your comment">
+        </textarea>
+        <button type="submit">Add comment</button>
+       </form>
  </div>
    </section>`;
-  console.log(master);
 };
 
 export default popup;
