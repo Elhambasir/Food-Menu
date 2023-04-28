@@ -1,0 +1,220 @@
+.food-container {
+  padding: 10px;
+  height: auto;
+}
+
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  text-align: center;
+}
+
+.header {
+  color: #000;
+}
+
+li {
+  display: inline;
+  padding: 20px;
+  color: #000;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.food-list {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  height: auto;
+}
+
+.food-card {
+  border: 1px solid lightblue;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 2%;
+}
+
+.food-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.like-section {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+
+div.button {
+  display: flex;
+}
+
+input {
+  padding: 7px;
+}
+
+div.button input {
+  flex: 1;
+  border: 1px solid lightblue;
+  padding: 10px;
+}
+
+div.button input:hover {
+  cursor: pointer;
+  background-color: cadetblue;
+  color: white;
+}
+
+.like-symbol {
+  color: lightgray;
+}
+
+.liked {
+  color: orange;
+}
+
+.like-symbol:hover {
+  cursor: pointer;
+}
+
+footer {
+  width: 99%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.popup {
+  z-index: 4;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 103vh;
+  width: 100%;
+  backdrop-filter: blur(4px);
+}
+
+#btnClose {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.container {
+  height: 80vh;
+  position: relative;
+  background-color: white;
+  margin: 60px 90px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow-y: scroll;
+}
+
+.names-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 8px 30px;
+}
+
+.area,
+.category,
+.likesNum,
+.strComment {
+  background: rgba(175, 172, 172, 0.3);
+  padding: 8px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.image {
+  width: 400px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.align-end {
+  align-self: end;
+}
+
+form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+button {
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  border: 1px solid cadetblue;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+h2 {
+  text-align: center;
+}
+
+button:hover {
+  background-color: cadetblue;
+  outline: none;
+  color: white;
+  border: white;
+}
+
+button:active {
+  background-color: #2ac5b0;
+  box-shadow: 0 3px #666;
+  transform: translateY(1px);
+}
+
+.text {
+  margin-top: 20px;
+  border: 1px solid #cfd8dc;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.75rem;
+  width: 70%;
+  font-size: 0.7rem;
+}
