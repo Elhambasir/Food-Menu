@@ -1,4 +1,4 @@
- # Food Menu
+ # FOOD MENU
 HTML, CSS and JavaScript Capstone Project
 <a name="readme-top"></a>
 
@@ -44,7 +44,7 @@ HTML, CSS and JavaScript Capstone Project
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎥 Video Explanation <a name=""></a>
-
+[See the video](https://drive.google.com/file/d/1phFOLjrZe3SyBJ66_zexl-gTKdrFpbF0/view?usp=share_link)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 Coming Soon
@@ -155,7 +155,7 @@ If you think that change is necessary - open a Pull Request in this repository a
 - GitHub: [@Jonathan](https://github.com/KAYEMBAJONATHAN)
 - LinkedIn: [@Jonathan](https://www.linkedin.com/in/jonathan-kayemba-b56247236/)
 
-- GitHub: [@Elhambasir]((https://github.com/Elhambasir))
+- GitHub: [@Elhambasir](https://github.com/Elhambasir)
 - LinkedIn: [Elhambasir](https://www.linkedin.com/in/basir-ahmadi-8aba89263)
 
 
