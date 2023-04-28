@@ -7,14 +7,14 @@ const getLikesById = async (id) => {
     .then((response) => response.json())
     .then((data) => {
       // eslint-disable-next-line consistent-return
-      data.forEach((likeCounter) => {
-        if (+likeCounter.item_id === +id) {
-          document.querySelector('.likesNum').innerHTML = `${'Likes : '}${likeCounter.likes}`;
+      data.forEach((eachItem) => {
+        if (+eachItem.item_id === +id) {
+          document.querySelector('.likesNum').innerHTML = `${'Likes : '}${eachItem.likes}`;
           getComments(+id, document.querySelector('.comments'));
         }
       });
       const btnSubmit = document.querySelector('.submit');
-      btnSubmit.addEventListener('click', () => { addComment(id); });
+      btnSubmit.addEventListener('click', () => { addComment(+id); });
 
       const btnClose = document.querySelector('#btnClose');
       btnClose.addEventListener('click', () => {
@@ -24,7 +24,7 @@ const getLikesById = async (id) => {
     });
 };
 const renderPopup = async (id) => {
-  await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+  await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${+id}`)
     .then((res) => res.json())
     .then((d) => {
       const master = document.querySelector('.container');
@@ -36,7 +36,7 @@ const renderPopup = async (id) => {
           <div class="area">Area: ${d.meals[0].strArea} </div>
           <div  class="likesNum">Likes: ${getLikesById(d.meals[0].idMeal)}</div>
           <div  class="category">Category: ${d.meals[0].strCategory}</div>
-          <div  class="strTag">Tags: ${d.meals[0].strTags}</div>
+          <div  class="strComment">Comments: </div>
         </div>
         <div class="list">
         <h2>Add Comments</h2>
