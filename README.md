@@ -23,7 +23,7 @@ HTML, CSS and JavaScript Capstone Project
 # 📖 [JavaScript Capstone] <a name="javascript-capstone-2"></a>
 
 
-**[javascript-capstone-2]** gets data from an API and displays the data along with other images. It also allows you to add comments to the images displayed. All data is preserved thanks to the external<a href=""> Leaderboard API service</a>.
+**[javascript-capstone-2]** gets data from an API and displays the data along with other images. It also allows you to add comments to the images displayed. All data is preserved thanks to the external.
 
 ## 🛠 Built With  <a name="built-with"></a>
 
