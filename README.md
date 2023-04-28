@@ -47,8 +47,7 @@ HTML, CSS and JavaScript Capstone Project
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-Coming Soon
-
+[See Live](https://elhambasir.github.io/Food-Menu/dist/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -155,7 +154,7 @@ If you think that change is necessary - open a Pull Request in this repository a
 - GitHub: [@Jonathan](https://github.com/KAYEMBAJONATHAN)
 - LinkedIn: [@Jonathan](https://www.linkedin.com/in/jonathan-kayemba-b56247236/)
 
-- GitHub: [@Elhambasir]((https://github.com/Elhambasir))
+-GitHub: [@Elhambasir](https://github.com/Elhambasir)
 - LinkedIn: [Elhambasir](https://www.linkedin.com/in/basir-ahmadi-8aba89263)
 
 
