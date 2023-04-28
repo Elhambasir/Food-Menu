@@ -70,6 +70,7 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone[(https://github.com/Elhambasir/javascript-capstone-2.git)]
 ```
+- Issues (https://github.com/Elhambasir/javascript-capstone-2/issues)
 
 ## Usage
 
@@ -151,12 +152,11 @@ If you think that change is necessary - open a Pull Request in this repository a
 ## 👥 Authors <a name="authors"></a>
 
 
-- GitHub: ()
-- LinkedIn: ()
+- GitHub: [@Jonathan](https://github.com/KAYEMBAJONATHAN)
+- LinkedIn: [@Jonathan](https://www.linkedin.com/in/jonathan-kayemba-b56247236/)
 
-- GitHub: ()
-- Twitter: ()
-- LinkedIn: ()
+- GitHub: [@Elhambasir]((https://github.com/Elhambasir))
+- LinkedIn: [Elhambasir](https://www.linkedin.com/in/basir-ahmadi-8aba89263)
 
 
 
@@ -168,8 +168,6 @@ If you think that change is necessary - open a Pull Request in this repository a
 # **[Feature-1]** 
 - Add more styling (aesthetics)
 
-# **[Feature-2]** 
-- Dynamic leaderboard
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,6 +193,6 @@ Where can I download node JS for installation?
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]() licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
