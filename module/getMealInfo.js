@@ -4,8 +4,8 @@ import like from './addLike.js';
 
 const foodCards = document.querySelector('.food-list');
 const meals = [];
-function renderHtmlPage(meal) {
-  meal.forEach((item) => {
+const renderHtmlPage = async (meal) => {
+  await meal.forEach((item) => {
     foodCards.innerHTML += `
     <div class="food-card">
     <img src="${item.meals[0].strMealThumb}" class="img-food">
@@ -19,7 +19,7 @@ function renderHtmlPage(meal) {
       <div class="likes">likes</div>
     </div>
     <div class="button">
-    <input type="button" class="btnComments" value="Comments">
+    <input type="button" class="btnComments" id="${item.meals[0].idMeal}" value="Comments">
     <input type="button" class="btnReserve" value="Reserve">
     </div>
     </div>
@@ -33,9 +33,9 @@ function renderHtmlPage(meal) {
       });
     });
   });
-}
+};
 
-const displayFoodDetails = () => {
+const displayFoodDetails = async () => {
   const getResponse = async () => {
     for (let i = 52770; i < 52778; i += 1) {
       const objectItem = fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${i}`).then((res) => res.json());
