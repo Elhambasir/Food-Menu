@@ -1,4 +1,5 @@
 const getComments = async (id, element) => {
+  element.innerHTML = '';
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/i3eTd09nELlrgd0snSwn/comments?item_id=${id}`)
     .then((response) => response.json()).then((item) => {
       item.forEach((item) => {

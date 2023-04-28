@@ -1,6 +1,7 @@
 import countItems from './itemCount.js';
 import getLikes from './likeCount.js';
 import like from './addLike.js';
+import renderPopup from './popup.js';
 
 const foodCards = document.querySelector('.food-list');
 const meals = [];
@@ -51,6 +52,13 @@ const displayFoodDetails = async () => {
     // Get and display number of items
     const numOfItems = document.querySelector('.number-of-items');
     countItems(meals.length, numOfItems);
+
+    const btnComment = document.querySelectorAll('.btnComments');
+    btnComment.forEach((element) => {
+      element.addEventListener('click', (e) => {
+        renderPopup(e.target.id);
+      });
+    });
   });
 };
 
