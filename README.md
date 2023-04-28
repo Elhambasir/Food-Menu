@@ -1,4 +1,4 @@
- # Food List
+ # Food Menu
 HTML, CSS and JavaScript Capstone Project
 <a name="readme-top"></a>
 
@@ -20,10 +20,10 @@ HTML, CSS and JavaScript Capstone Project
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [JavaScript Capstone] <a name="javascript-capstone-2"></a>
+# 📖 [Food Menu] <a name="Food Menu"></a>
 
 
-**[javascript-capstone-2]** gets data from an API and displays the data along with other images. It also allows you to add comments to the images displayed. All data is preserved thanks to the external.
+**[Food Menu]** gets data from an API and displays the data along with other images. It also allows you to add comments to the images displayed. All data is preserved thanks to the external.
 
 ## 🛠 Built With  <a name="built-with"></a>
 
@@ -68,9 +68,9 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone[(https://github.com/Elhambasir/javascript-capstone-2.git)]
+  git clone[(https://github.com/Elhambasir/Food-Menu.git)]
 ```
-- Issues (https://github.com/Elhambasir/javascript-capstone-2/issues)
+- Issues (https://github.com/Elhambasir/Food-Menu/issues)
 
 ## Usage
 
