@@ -1,10 +1,20 @@
 import countItems from './itemCount.js';
+
 import renderPopup from './popup.js';
 
 const foodCards = document.querySelector('.food-list');
 const meals = [];
 const renderHtmlPage = async (meal) => {
   await meal.forEach((item) => {
+=======
+import getLikes from './likeCount.js';
+import like from './addLike.js';
+
+const foodCards = document.querySelector('.food-list');
+const meals = [];
+function renderHtmlPage(meal) {
+  meal.forEach((item) => {
+
     foodCards.innerHTML += `
     <div class="food-card">
     <img src="${item.meals[0].strMealThumb}" class="img-food">
@@ -18,20 +28,29 @@ const renderHtmlPage = async (meal) => {
       <div class="likes">likes</div>
     </div>
     <div class="button">
+
     <input type="button" class="btnComments" id="${item.meals[0].idMeal}" value="Comments">
+=======
+    <input type="button" class="btnComments" value="Comments">
+
     <input type="button" class="btnReserve" value="Reserve">
     </div>
     </div>
     `;
+
+    getLikes();
+
     const btnLike = document.querySelectorAll('.like');
     btnLike.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         const id = Number(e.target.id);
+
         id();
       });
     });
   });
 };
+
 
 const displayFoodDetails = async () => {
   const getResponse = async () => {
@@ -44,6 +63,7 @@ const displayFoodDetails = async () => {
   getResponse().then((meals) => {
     renderHtmlPage(meals);
   }).then(async () => {
+
     // Get and display number of like
     // Get and display number of items
     const numOfItems = document.querySelector('.number-of-items');
@@ -55,6 +75,12 @@ const displayFoodDetails = async () => {
         renderPopup(e.target.id);
       });
     });
+
+    // Get and display number of likes
+    getLikes();
+    // Get and display number of items
+    const numOfItems = document.querySelector('.number-of-items');
+    countItems(meals.length, numOfItems);
   });
 };
 
