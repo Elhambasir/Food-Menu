@@ -47,7 +47,7 @@ HTML, CSS and JavaScript Capstone Project
 [See the video](https://drive.google.com/file/d/1phFOLjrZe3SyBJ66_zexl-gTKdrFpbF0/view?usp=share_link)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-Coming Soon
+[See Live](https://elhambasir.github.io/Food-Menu/dist/)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
